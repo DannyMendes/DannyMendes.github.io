@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danielly Mendes - Portfólio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    * { font-family: 'Inter', sans-serif; }
+    .bg-card { background: rgba(255,255,255,0.03); }
+    .text-muted-foreground { color: rgba(255,255,255,0.6); }
+    .fade-in-up { animation: fadeInUp 0.6s ease-out forwards; }
+    @keyframes fadeInUp { from { opacity:0; transform: translateY(20px); } to { opacity:1; transform: translateY(0); } }
+  </style>
+</head>
+<body class="text-white min-h-screen" style="background: radial-gradient(ellipse at 60% 0%, #5a3580 0%, #3a2055 45%, #1a1030 100%);">
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-[#1a1030]/70 border-b border-purple-500/20">
+    <div class="w-11/12 lg:w-[75%] mx-auto px-0 py-4 flex items-center justify-between">
+      <button onclick="scrollTo('about')" class="text-lg bg-gradient-to-r from-white to-purple-400 bg-clip-text text-transparent">
+        Danielly Mendes
+      </button>
+      <nav class="hidden md:flex items-center gap-8">
+        <button onclick="scrollTo('about')" class="text-sm text-muted-foreground hover:text-white transition-colors">Sobre</button>
+        <button onclick="scrollTo('skills')" class="text-sm text-muted-foreground hover:text-white transition-colors">Skills</button>
+        <button onclick="scrollTo('projects')" class="text-sm text-muted-foreground hover:text-white transition-colors">Projetos</button>
+      </nav>
+      <a href="#" download class="text-sm px-4 py-2 rounded-lg bg-purple-500/10 hover:bg-purple-500/20 border border-purple-500/35 text-purple-300 hover:text-purple-200 transition-all duration-300">
+        Currículo
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="about" class="min-h-screen flex items-center px-6 pt-24 pb-16">
+    <div class="w-11/12 lg:w-[75%] mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 items-center">
+        <div class="fade-in-up lg:col-span-2">
+          <h1 class="text-5xl md:text-6xl mb-3 bg-gradient-to-br from-white via-white to-purple-400 bg-clip-text text-transparent leading-tight">
+            Danielly Mendes<br>Pires Ferreira
+          </h1>
+          <h2 class="text-xl md:text-2xl text-purple-400 mb-4">Engenheira de Software</h2>
+          <div class="flex items-center gap-2 text-sm text-white/80 mb-6">
+            <i data-lucide="map-pin" class="w-4 h-4"></i>
+            <span>Portugal</span>
+          </div>
+          <p class="text-base text-white/80 max-w-xl mb-4 leading-relaxed">
+            Engenheira de Software Júnior com experiência em desenvolvimento web com HTML, CSS e JavaScript, PHP, MySQL. Conhecimentos em desenvolvimento com Java, C++.
+          </p>
+          <p class="text-base text-white/80 max-w-xl mb-8 leading-relaxed">
+            Atuo na criação de aplicações, integrações e automações com IA (Copilot, Lovable, TRAE, n8n). Breve experiência em gestão de projetos de software. Busco sempre a evolução contínua.
+          </p>
+          <div class="flex flex-wrap items-center gap-3 mb-8">
+            <a href="mailto:ferreiradmp@gmail.com" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 hover:bg-purple-500/10 border border-purple-500/35 hover:border-purple-500/50 text-muted-foreground hover:text-white transition-all">
+              <svg class="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              ferreiradmp@gmail.com
+            </a>
+            <a href="https://github.com/DannyMendes" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 hover:bg-purple-500/10 border border-purple-500/35 hover:border-purple-500/50 text-muted-foreground hover:text-white transition-all">
+              <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              github.com/DannyMendes
+            </a>
+            <a href="https://linkedin.com/in/seu-perfil" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 hover:bg-purple-500/10 border border-purple-500/35 hover:border-purple-500/50 text-muted-foreground hover:text-white transition-all">
+              <svg class="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              LinkedIn
+            </a>
+          </div>
+          <a href="#" download class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-500 hover:to-purple-400 text-white shadow-lg hover:shadow-purple-500/50 transition-all">
+            <i data-lucide="download" class="w-4 h-4"></i>
+            Baixar Currículo
+          </a>
+        </div>
+        <div class="flex justify-center lg:justify-end fade-in-up lg:col-span-1" style="animation-delay:0.2s">
+          <div class="relative">
+            <div class="absolute inset-0 rounded-full bg-purple-500/20 blur-3xl scale-110"></div>
+            <div class="absolute inset-0 rounded-full border border-purple-500/35 scale-105"></div>
+            <div class="relative w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden border-2 border-purple-500/40 shadow-2xl shadow-purple-500/20 bg-purple-500/10">
+              <div class="w-full h-full flex items-center justify-center text-purple-400">
+                <i data-lucide="user" class="w-32 h-32"></i>
+              </div>
+            </div>
+            <div class="absolute -bottom-4 -right-4 px-4 py-2 rounded-lg bg-card border border-purple-500/35 shadow-xl backdrop-blur-sm">
+              <span class="text-sm text-purple-300">Software Engineer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-24 px-6 relative">
+    <div class="w-11/12 lg:w-[75%] mx-auto">
+      <div class="mb-16 fade-in-up">
+        <span class="inline-block px-4 py-2 rounded-lg bg-purple-500/10 border border-purple-500/20 text-sm text-purple-400 mb-4">
+          Tecnologias
+        </span>
+        <h2 class="text-4xl md:text-5xl mb-4">Habilidades & Ferramentas</h2>
+        <p class="text-muted-foreground max-w-xl">
+          Experiência profissional e/ou acadêmica
+        </p>
+      </div>
+      <div class="flex flex-col gap-10">
+        <div class="grid grid-cols-[110px_1fr] gap-6 items-start fade-in-up">
+          <div class="pt-2">
+            <span class="text-xs uppercase tracking-[0.18em] text-purple-400/70">Skillset</span>
+          </div>
+          <div class="flex flex-wrap gap-3" id="skillset-pills"></div>
+        </div>
+        <div class="h-px bg-white/5 ml-[110px]"></div>
+        <div class="grid grid-cols-[110px_1fr] gap-6 items-start fade-in-up" style="animation-delay:0.05s">
+          <div class="pt-2">
+            <span class="text-xs uppercase tracking-[0.18em] text-purple-400/70">Tools</span>
+          </div>
+          <div class="flex flex-wrap gap-3" id="tools-pills"></div>
+        </div>
+        <div class="h-px bg-white/5 ml-[110px]"></div>
+        <div class="grid grid-cols-[110px_1fr] gap-6 items-start fade-in-up" style="animation-delay:0.1s">
+          <div class="pt-2">
+            <span class="text-xs uppercase tracking-[0.18em] text-purple-400/70">Adicionais</span>
+          </div>
+          <div class="flex flex-wrap gap-3" id="additional-pills"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications" class="py-24 px-6 relative">
+    <div class="w-11/12 lg:w-[75%] mx-auto">
+      <div class="mb-12 fade-in-up">
+        <span class="inline-block px-4 py-2 rounded-lg bg-purple-500/10 border border-purple-500/20 text-sm text-purple-400 mb-4">
+          Cursos e Formações
+        </span>
+        <h2 class="text-4xl md:text-5xl mb-4">Cursos e Formações</h2>
+        <p class="text-muted-foreground max-w-xl">
+          Adquiridos ao longo da minha carreira
+        </p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12" id="certifications-grid"></div>
+      <div>
+        <div class="mb-8 fade-in-up">
+          <h3 class="text-2xl text-purple-400 mb-4">Em Formação</h3>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="in-progress-grid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="projects" class="py-24 px-6 relative">
+    <div class="w-11/12 lg:w-[75%] mx-auto">
+      <div class="mb-16 fade-in-up">
+        <span class="inline-block px-4 py-2 rounded-lg bg-purple-500/10 border border-purple-500/20 text-sm text-purple-400 mb-4">
+          Projetos
+        </span>
+        <h2 class="text-4xl md:text-5xl mb-4">Portfólio no GitHub</h2>
+        <p class="text-muted-foreground max-w-xl" id="projects-desc">Carregando repositórios...</p>
+      </div>
+      <div class="mb-8" id="featured-card"></div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="projects-grid"></div>
+      <div class="text-center mt-12 fade-in-up">
+        <a href="https://github.com/DannyMendes?tab=repositories" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white/5 hover:bg-white/10 border border-purple-500/35 text-muted-foreground hover:text-purple-400 transition-all">
+          <i data-lucide="github" class="w-4 h-4"></i>
+          Ver todos os repositórios
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="py-16 px-6 border-t border-purple-500/20">
+    <div class="w-11/12 lg:w-[75%] mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div>
+          <h3 class="text-xl mb-4 bg-gradient-to-r from-white to-purple-400 bg-clip-text text-transparent">Danielly Mendes</h3>
+          <p class="text-sm text-muted-foreground leading-relaxed">Engenheira de Software apaixonada por criar soluções escaláveis e experiências digitais excepcionais.</p>
+        </div>
+        <div>
+          <h4 class="mb-4">Links Rápidos</h4>
+          <ul class="space-y-2">
+            <li><a href="#about" class="text-sm text-muted-foreground hover:text-purple-400 transition-colors">Sobre Mim</a></li>
+            <li><a href="#projects" class="text-sm text-muted-foreground hover:text-purple-400 transition-colors">Projetos</a></li>
+            <li><a href="#" download class="text-sm text-muted-foreground hover:text-purple-400 transition-colors">Baixar Currículo</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="mb-4">Vamos Conversar</h4>
+          <p class="text-sm text-muted-foreground mb-4">Disponível para oportunidades e colaborações</p>
+          <div class="flex items-center gap-4">
+            <a href="https://github.com/DannyMendes" target="_blank" class="p-2 rounded-lg bg-white/5 hover:bg-purple-500/10 border border-purple-500/35 hover:border-purple-500/50 text-muted-foreground hover:text-white transition-all">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/seu-perfil" target="_blank" class="p-2 rounded-lg bg-white/5 hover:bg-purple-500/10 border border-purple-500/35 hover:border-purple-500/50 text-muted-foreground hover:text-white transition-all">
+              <svg class="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="mailto:ferreiradmp@gmail.com" class="p-2 rounded-lg bg-white/5 hover:bg-purple-500/10 border border-purple-500/35 hover:border-purple-500/50 text-muted-foreground hover:text-white transition-all">
+              <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-white/5 text-center">
+        <p class="text-sm text-muted-foreground flex items-center justify-center gap-2">
+          © <span id="current-year"></span> Danielly Mendes. Desenvolvido com
+          <i data-lucide="heart" class="w-4 h-4 text-purple-400 fill-purple-400"></i>
+          e muita dedicação!
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function scrollTo(id) { document.getElementById(id).scrollIntoView({ behavior: 'smooth' }); }
+    const skillset = [
+      { name: "HTML", icon: "html5", color: "#E34F26" },
+      { name: "CSS", icon: "css", color: "#1572B6" },
+      { name: "JavaScript", icon: "javascript", color: "#F7DF1E" },
+      { name: "WordPress", icon: "wordpress", color: "#21759B" },
+      { name: "PHP", icon: "php", color: "#777BB4" },
+      { name: "MySQL", icon: "mysql", color: "#4479A1" },
+      { name: "Java", icon: "openjdk", color: "#007396" },
+      { name: "C", icon: "c", color: "#A8B9CC" },
+      { name: "C++", icon: "cplusplus", color: "#00599C" },
+      { name: "Spring Boot", icon: "springboot", color: "#6DB33F" },
+      { name: "Webhooks", icon: "socketdotio", color: "#6366F1" }
+    ];
+    const tools = [
+      { name: "Git", icon: "git", color: "#F05032" },
+      { name: "GitHub", icon: "github", color: "#ffffff" },
+      { name: "VS Code", icon: "visualstudiocode", color: "#007ACC", iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/visualstudiocode.svg" },
+      { name: "Figma", icon: "figma", color: "#F24E1E" },
+      { name: "Jira", icon: "jira", color: "#0052CC" },
+      { name: "Copilot", icon: "githubcopilot", color: "#00A3FF" },
+      { name: "n8n", icon: "n8n", color: "#FF6D5A" }
+    ];
+    const additional = [
+      { name: "Arquitetura de Software", color: "#A855F7" },
+      { name: "REST APIs", color: "#2563EB" },
+      { name: "GraphQL", color: "#E535AB" },
+      { name: "Testes Automatizados", color: "#FF3E00" },
+      { name: "CI/CD", color: "#2088FF" },
+      { name: "Metodologias Ágeis", color: "#22C55E" },
+      { name: "Scrum", color: "#FF6B6B" },
+      { name: "Code Review", color: "#ffffff" },
+      { name: "DDD", color: "#FACC15" },
+      { name: "Clean Code", color: "#10B981" },
+      { name: "Microsserviços", color: "#326CE5" }
+    ];
+    const certifications = [
+      { name: "Graduação em Engenharia de Software", issuer: "Unigran", year: "", icon: "graduation-cap" },
+      { name: "Técnico de Informática", issuer: "Newton Paiva - Brasil", year: "", icon: "graduation-cap" },
+      { name: "Bootcamp Piscine na 42Heilbronn (Alemanha)", issuer: "Programação em C", year: "", icon: "code-2" },
+      { name: "Programação Java", issuer: "IEFP - Portugal", year: "", icon: "code-2" },
+      { name: "2 Semestre de Gestão", issuer: "Pitagoras - Brasil", year: "", icon: "book-open" },
+      { name: "Curso Web com WordPress", issuer: "Portugal", year: "", icon: "layers" },
+      { name: "Curso Design Gráfico e Experiência do Usuário", issuer: "Online", year: "", icon: "monitor-smartphone" }
+    ];
+    const inProgress = [
+      { name: "Arquitetura de Software", icon: "layers" },
+      { name: "Framework Web", icon: "code-2" },
+      { name: "IA Aplicada na Programação", icon: "monitor-smartphone" }
+    ];
+    const fallbackProjects = [
+      { name: "Projeto Destaque", description: "Sistema completo com autenticação OAuth2, dashboard analítico em tempo real e gerenciamento de usuários com diferentes níveis de permissão.", html_url: "https://github.com/DannyMendes", homepage: "", topics: ["React", "TypeScript", "Node.js"], stargazers_count: 12, forks_count: 3, updated_at: new Date().toISOString(), featured: true },
+      { name: "Projeto 2", description: "API RESTful escalável com cache distribuído, filas de processamento assíncrono e integração com serviços externos.", html_url: "https://github.com/DannyMendes", homepage: "", topics: ["Python", "FastAPI", "Docker"], stargazers_count: 8, forks_count: 2, updated_at: new Date().toISOString() },
+      { name: "Projeto 3", description: "Aplicativo mobile cross-platform com sincronização offline-first e notificações push.", html_url: "https://github.com/DannyMendes", homepage: "", topics: ["Flutter", "Firebase"], stargazers_count: 15, forks_count: 5, updated_at: new Date().toISOString() }
+    ];
+    function timeAgo(dateStr) {
+      const diff = Date.now() - new Date(dateStr).getTime();
+      const days = Math.floor(diff / 86400000);
+      if (days === 0) return "hoje";
+      if (days === 1) return "ontem";
+      if (days < 30) return `${days} dias atrás`;
+      const months = Math.floor(days / 30);
+      if (months < 12) return `${months} mês${months > 1 ? 'es' : ''} atrás`;
+      return `${Math.floor(months / 12)} ano${Math.floor(months / 12) > 1 ? 's' : ''} atrás`;
+    }
+    function getSkillIconUrl(item) {
+      if (item.iconUrl) return item.iconUrl;
+      const iconColor = item.color.replace('#', '');
+      return `https://cdn.simpleicons.org/${item.icon}/${iconColor}`;
+    }
+    function renderSkillPills(containerId, items) {
+      const container = document.getElementById(containerId);
+      items.forEach((item, i) => {
+        const pill = document.createElement('div');
+        pill.className = 'inline-flex items-center gap-2.5 px-4 py-2 rounded-full cursor-default select-none transition-all duration-200 hover:-translate-y-1';
+        pill.style.background = 'rgba(255,255,255,0.04)';
+        pill.style.border = '1px solid rgba(167,139,250,0.35)';
+        pill.style.boxShadow = '0 2px 12px rgba(167,139,250,0.08)';
+        pill.style.animationDelay = `${i * 0.04}s`;
+        pill.classList.add('fade-in-up');
+        pill.innerHTML = `
+          <img src="${getSkillIconUrl(item)}" alt="${item.name}" width="18" height="18" class="flex-shrink-0" onerror="this.style.display='none'" />
+          <span class="text-sm text-white/90 whitespace-nowrap">${item.name}</span>
+        `;
+        container.appendChild(pill);
+      });
+    }
+    function renderAdditionalPills() {
+      const container = document.getElementById('additional-pills');
+      additional.forEach((item, i) => {
+        const pill = document.createElement('span');
+        pill.className = 'inline-flex items-center px-4 py-2 rounded-lg text-sm text-white/80 cursor-default select-none transition-all duration-200 hover:text-white hover:-translate-y-1';
+        pill.style.background = 'rgba(255,255,255,0.03)';
+        pill.style.border = '2px solid rgba(167,139,250,0.35)';
+        pill.style.boxShadow = '0 2px 12px rgba(167,139,250,0.06)';
+        pill.style.animationDelay = `${i * 0.04}s`;
+        pill.classList.add('fade-in-up');
+        pill.textContent = item.name;
+        container.appendChild(pill);
+      });
+    }
+    function renderCertifications() {
+      const container = document.getElementById('certifications-grid');
+      certifications.forEach((cert, i) => {
+        const card = document.createElement('div');
+        card.className = 'group p-5 rounded-lg transition-all duration-300 hover:-translate-y-1 relative overflow-hidden';
+        card.style.background = 'rgba(255,255,255,0.03)';
+        card.style.border = '2px solid rgba(167,139,250,0.35)';
+        card.style.boxShadow = '0 2px 12px rgba(167,139,250,0.06)';
+        card.style.animationDelay = `${i * 0.08}s`;
+        card.classList.add('fade-in-up');
+        card.innerHTML = `
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex items-start gap-3">
+              <div class="mt-0.5 p-1.5 rounded-md bg-purple-500/10 border border-purple-500/20 shrink-0">
+                <i data-lucide="${cert.icon}" class="w-4 h-4 text-purple-400"></i>
+              </div>
+              <div>
+                <p class="text-sm text-white group-hover:text-purple-200 transition-colors font-medium">${cert.name}</p>
+                <p class="text-xs text-gray-400 mt-1">${cert.issuer}</p>
+              </div>
+            </div>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+    function renderInProgress() {
+      const container = document.getElementById('in-progress-grid');
+      inProgress.forEach((item, i) => {
+        const card = document.createElement('div');
+        card.className = 'group p-5 rounded-lg transition-all duration-300 hover:-translate-y-1';
+        card.style.background = 'rgba(255,255,255,0.03)';
+        card.style.border = '2px solid rgba(167,139,250,0.35)';
+        card.style.boxShadow = '0 2px 12px rgba(167,139,250,0.06)';
+        card.style.animationDelay = `${i * 0.08}s`;
+        card.classList.add('fade-in-up');
+        card.innerHTML = `
+          <div class="flex items-start gap-3">
+            <div class="mt-0.5 p-1.5 rounded-md bg-purple-500/10 border border-purple-500/20 shrink-0">
+              <i data-lucide="${item.icon}" class="w-4 h-4 text-purple-400"></i>
+            </div>
+            <p class="text-sm text-white group-hover:text-purple-200 transition-colors">${item.name}</p>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+    function renderProjects(projects) {
+      const featured = projects.find(p => p.featured) || projects[0];
+      const others = projects.filter(p => p !== featured).slice(0,6);
+      if (featured) {
+        const featuredCard = document.createElement('div');
+        featuredCard.className = 'group p-8 rounded-xl bg-card border border-purple-500/35 hover:border-purple-500/50 transition-all duration-500 fade-in-up';
+        featuredCard.innerHTML = `
+          <div>
+            <div class="flex items-start justify-between mb-4 flex-wrap gap-4">
+              <div>
+                <div class="flex items-center gap-2 mb-2">
+                  <i data-lucide="star" class="w-4 h-4 fill-purple-400 text-purple-400"></i>
+                  <span class="text-xs text-purple-400 uppercase tracking-wider">Projeto em Destaque</span>
+                </div>
+                <h3 class="text-2xl md:text-3xl group-hover:text-purple-300 transition-colors">${featured.name}</h3>
+              </div>
+              <div class="flex items-center gap-4 text-sm text-muted-foreground">
+                <span class="flex items-center gap-1"><i data-lucide="star" class="w-4 h-4"></i> ${featured.stargazers_count}</span>
+                <span class="flex items-center gap-1"><i data-lucide="git-fork" class="w-4 h-4"></i> ${featured.forks_count}</span>
+              </div>
+            </div>
+            <p class="text-muted-foreground mb-6 leading-relaxed max-w-2xl text-base">${featured.description || 'Projeto sem descrição. Adicione uma no GitHub.'}</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              ${featured.topics.map(tag => `<span class="px-3 py-1 rounded-md bg-purple-500/10 border border-purple-500/35 text-sm text-purple-300">${tag}</span>`).join('')}
+            </div>
+            <div class="flex items-center justify-between flex-wrap gap-4">
+              <div class="flex items-center gap-4">
+                <a href="${featured.html_url}" target="_blank" class="inline-flex items-center gap-2 px-5 py-2 rounded-lg bg-white/5 hover:bg-white/10 border border-purple-500/35 hover:border-purple-500/50 text-muted-foreground hover:text-white transition-all">
+                  <i data-lucide="github" class="w-4 h-4"></i> Ver Repositório
+                </a>
+                ${featured.homepage ? `<a href="${featured.homepage}" target="_blank" class="inline-flex items-center gap-2 px-5 py-2 rounded-lg bg-purple-600 hover:bg-purple-500 text-white transition-all">Deploy <i data-lucide="external-link" class="w-4 h-4"></i></a>` : ''}
+              </div>
+              <span class="flex items-center gap-1 text-xs text-muted-foreground">
+                <i data-lucide="clock" class="w-3 h-3"></i> Atualizado ${timeAgo(featured.updated_at)}
+              </span>
+            </div>
+          </div>
+        `;
+        document.getElementById('featured-card').appendChild(featuredCard);
+      }
+      others.forEach((repo, index) => {
+        const card = document.createElement('div');
+        card.className = 'group p-6 rounded-xl bg-card border border-purple-500/20 hover:border-purple-500/50 transition-all duration-400 flex flex-col h-full';
+        card.style.animationDelay = `${index * 0.1}s`;
+        card.classList.add('fade-in-up');
+        card.innerHTML = `
+          <div class="flex items-start justify-between mb-3">
+            <h3 class="group-hover:text-purple-300 transition-colors">${repo.name}</h3>
+            <div class="flex items-center gap-3 text-xs text-muted-foreground shrink-0">
+              <span class="flex items-center gap-1"><i data-lucide="star" class="w-3 h-3"></i> ${repo.stargazers_count}</span>
+              <span class="flex items-center gap-1"><i data-lucide="git-fork" class="w-3 h-3"></i> ${repo.forks_count}</span>
+            </div>
+          </div>
+          <p class="text-sm text-muted-foreground mb-4 leading-relaxed flex-1">${repo.description || 'Sem descrição disponível.'}</p>
+          <div class="flex flex-wrap gap-1.5 mb-4">
+            ${repo.topics.slice(0,4).map(tag => `<span class="px-2 py-0.5 rounded-md bg-purple-500/10 border border-purple-500/35 text-xs text-purple-300">${tag}</span>`).join('')}
+          </div>
+          <div class="flex items-center gap-3 pt-3 border-t border-white/5">
+            <a href="${repo.html_url}" target="_blank" class="inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-purple-400 transition-colors">
+              <i data-lucide="github" class="w-3.5 h-3.5"></i> Repositório
+            </a>
+            ${repo.homepage ? `<a href="${repo.homepage}" target="_blank" class="inline-flex items-center gap-1.5 text-xs text-purple-400 hover:text-purple-300 transition-colors">Deploy <i data-lucide="external-link" class="w-3 h-3"></i></a>` : ''}
+            <span class="ml-auto text-xs text-muted-foreground">${timeAgo(repo.updated_at)}</span>
+          </div>
+        `;
+        document.getElementById('projects-grid').appendChild(card);
+      });
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+      renderSkillPills('skillset-pills', skillset);
+      renderSkillPills('tools-pills', tools);
+      renderAdditionalPills();
+      renderCertifications();
+      renderInProgress();
+      renderProjects(fallbackProjects);
+      lucide.createIcons();
+      fetch('https://api.github.com/users/DannyMendes/repos?sort=updated&per_page=20')
+        .then(r => r.json())
+        .then(data => {
+          if (Array.isArray(data)) {
+            const valid = data.filter(r => r.description).map(r => ({
+              name: r.name,
+              description: r.description,
+              html_url: r.html_url,
+              homepage: r.homepage,
+              topics: r.topics || [],
+              stargazers_count: r.stargazers_count,
+              forks_count: r.forks_count,
+              updated_at: r.updated_at,
+              featured: false
+            }));
+            if (valid.length > 0) {
+              document.getElementById('projects-desc').textContent = 'Projetos reais do meu GitHub, do mais recente ao mais antigo.';
+              document.getElementById('featured-card').innerHTML = '';
+              document.getElementById('projects-grid').innerHTML = '';
+              renderProjects(valid);
+              lucide.createIcons();
+            }
+          }
+        })
+        .catch(() => { document.getElementById('projects-desc').textContent = 'Projetos reais do meu GitHub, do mais recente ao mais antigo.'; });
+    });
+  </script>
+</body>
+</html>
